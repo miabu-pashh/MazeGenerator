@@ -1,7 +1,11 @@
-class MazeGenerator{
+import java.io.*;
+import java.util.*;
+import java.util.HashMap;
+
+class Maze{
     private int V; // No. of vertices
 	private LinkedList<Integer> adj[]; 
-    MazeGenerator(int v)
+    Maze(int v)
 	{
 		V = v;
 		adj = new LinkedList[v];
@@ -12,7 +16,7 @@ class MazeGenerator{
 	void addEdge(int v, int w) { adj[v].add(w); }
     public static void main(String args[])
 	{
-		MazeGenerator g = new MazeGenerator(5);
+		Maze g = new Maze(5);
 
 		g.addEdge(0,1);
 		g.addEdge(0,2);
